@@ -46,17 +46,14 @@
                 <li>
                   <a href="/about/" data-view=".view-main" class="panel-close">Sobre</a>
                 </li>
-                <!-- <li>
-                  <a href="/cardapio_banco/" data-view=".view-main" class="panel-close">Cardápio</a>
-                </li> -->
+                <li>
+                  <a href="/cadastrar_cardapio/" data-view=".view-main" class="panel-close">Cadastrar</a>
+                </li> 
                 <li>
                   <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a>
                 </li>
 				        <li>
 					        <a href="/contato/" data-view=".view-main" class="panel-close" id="contato">Contato</a>
-                </li>
-                <li>
-                  <a href="#" data-popup=".form-firebase" class="popup-open orcamentoindex">Cadastrar</a>
                 </li>
 				        <li>
 				          <a href="#" class="logoff">Logoff</a> 
@@ -168,80 +165,6 @@
     </div> 
    </div> 
   <!-- =====================Cadastrar cardapio================== -->
-   <div class="popup form-firebase">
-    <div class="view">
-      <div class="page color-theme-black">
-        <div class="navbar color-theme-blue">
-          <div class="navbar-inner sliding">
-            <div class="left">
-              <a href="#" class="link back">
-                <i class="f7-icons">chevron_left</i>
-                <span class="ios-only">Back</span> 
-              </a> 
-            </div>
-            <div class="title">Inserir</div>
-          </div>
-        </div>
-      
-      <div class="page-content">
-        
-          <h1>Cadastrar Cardápio</h1>
-    
-        <div class="block-title"></div>
-        <div class="list no-hairlines-md">
-          <ul>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Prato do Dia</div>
-                  <div class="item-input-wrap">
-                      <input type="text" name="form-control" id="pratoInput" placeholder="Prato">
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Descricao</div>
-                  <div class="item-input-wrap">
-                      <input type="text" name="form-control" id="descricaodopratoInput" placeholder="Descricao">
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Preço</div>
-                  <div class="item-input-wrap">
-                      <input type="value" name="form-control" id="precoInput" placeholder="Preco">
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="item-content item-input">
-                <div class="item-inner">
-                  <div class="item-title item-label">Dia</div>
-                  <div class="item-input-wrap">
-                      <input type="text" name="form-control" id="diaInput" placeholder="Dia">
-                  </div>
-                </div>
-              </div>
-            </li>
-           </ul> 
-          <p class="row">
-            <!-- <button id="addButton" class="button button-big button-fill button-raised">Enviar</button> -->
-            <!-- <input type="button" id="addButton" value="Enviar" class="button button-big button-fill button-raised"> -->
-            <a href="#" id="addButton" class="col button button-big button-fill button-raised addButton">Enviar</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>   
-
     <!-- Login Screen -->
     <div class="login-screen" id="my-login-screen">
       <div class="view">
@@ -311,7 +234,7 @@
   <script src="js/firebase.js"></script>
   <script src="js/firebaseapp.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/inserir.js"></script>
+  <script src="js/cadastrar_cardapio.js"></script>
   <script src="js/contato.js"></script>	
   <script src="js/cardapio.js"></script>
 </body>

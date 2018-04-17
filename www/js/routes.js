@@ -25,8 +25,8 @@ routes = [
   },
   // Left View Pages
   {
-    path: '/left-page-1/',
-    url: './pages/left-page-1.html',
+    path: '/cadastrar_cardapio/',
+    url: './pages/cadastrar_cardapio.html',
   },
   {
     path: '/left-page-2/',

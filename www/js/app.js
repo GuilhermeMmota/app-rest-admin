@@ -103,7 +103,7 @@ $$('#my-login-screen .SignUp').on('click', function () {
     
     firebase
       .auth()
-      .signInWithEmailAndPassword(username,password)
+      .signInWithEmailAndPassword(username)
       .then( function(){
         app.dialog.alert('Welcome: ' + username);
         this.$$('.logado').text( username + '  Online');
