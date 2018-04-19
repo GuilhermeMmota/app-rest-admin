@@ -63,3 +63,14 @@ p{
 	left: 120px;
 }
 
+/* .demo-card-header-pic{
+	
+	position: relative;
+	left: 20%;
+	background-position: center;
+}  */
+
+.img{
+	position: relative;
+	left: 25%;
+}

@@ -215,3 +215,131 @@ firebase.database().ref('Comentarios').on('value', function (snapshot){
       
   })
 })
+
+// // =============================Alterar================================= 
+// function atualizar(){
+    
+//   var prato = document.getElementById('pratododiaInput').value;
+//   var descricao = document.getElementById('descricaoInput').value;
+//   var preco = document.getElementById('precoInput').value;
+//   var dia = document.getElementById('diaInput').value;
+//   var img = document.getElementById('imagemInput').value;
+
+//   window.alert(prato);
+
+//   // window.alert(email + "," + nome + "," + nascimento);
+
+//   //atualizadb(prato, descricao, preco, dia);
+// }
+
+// function gravadb(prato, descricao, preco, dia, img){ 
+
+//   var db = firebase.database().ref();
+
+//   db.child(id).set({
+
+//       Prato: prato,
+//       Descricao: descricao,
+//       Preco: preco,
+//       Dia: dia,
+//       img: img
+//   })
+// }
+
+// function atualizadb(prato, descricao, preco, dia, img){ 
+
+//   // var db = firebase.database().ref();
+
+//   var novo = {
+//       Prato: prato,
+//       Descricao: descricao,
+//       Preco: preco,
+//       Dia: dia,
+//       img: img
+//   };
+
+//   window.alert(novo);
+//   /*var indice = firebase.database().ref().child("cardapio").child("01").key;   
+//   var dados = {}
+//   dados[indice] = novo;
+
+//   return firebase.database().ref().update(dados);*/
+// }
+
+// =======================================Alterar============================================
+$$(document).on('page:init','.page[data-name="cadastrar_cardapio"]', function(e){
+  var page = e.detail;
+  console.log(page.name);
+
+  var uploader = $$('#uploader');
+  
+  // ouvir o evento change
+  $$('#btnAlterar').on('click',function () {
+
+          
+          //var formData = app.form.convertToData('#form-user-content')
+          var pratoInput = $$('#pratoInput').val();
+          var descricaoInput = $$('#descricaoInput').val();
+          var precoInput = $$('#precoInput').val();
+          var diaInput = $$('#diaInput').val();
+          var imagem = $$('#img').val();
+          
+          window.alert(prato);
+
+          function gravadb(pratoInput, descricaoInput, precoInput, diaInput, imagem){ 
+
+            var db = firebase.database().ref();
+          
+            db.child(id).set({
+          
+                Prato: pratoInput,
+                Descricao: descricaoInput,
+                Preco: precoInput,
+                Dia: diaInput,
+                imagem: img
+            })
+          }
+
+          function atualizadb(prato, descricao, preco, dia, imagem){ 
+
+            // var db = firebase.database().ref();
+          
+            var novo = {
+                Prato: pratoInput,
+                Descricao: descricaoInput,
+                Preco: precoInput,
+                Dia: diaInput,
+                imagem: img
+            };
+          
+            window.alert(novo);
+
+            var indice = firebase.database().ref().child("cardapio").child("01").key;   
+            var dados = {}
+            dados[indice] = novo;
+          
+            return firebase.database().ref().update(dados);
+          }
+
+           var formData = { prato: pratoInput, descricao: descricaoInput, preco: precoInput, dia: diaInput, imagem: img }
+           console.log(formData);
+           alert(JSON.stringify(formData))
+           firebase.database().ref().child('cardapio').push(formData)
+           task = spaceRef.put(file);
+          then( function () {
+                  app.dialog.alert('Mensagem Enviada');
+                  var pratoInput = $$('#pratoInput').val();
+                  var descricaoInput = $$('#descricaoInput').val();
+                  var precoInput = $$('#precoInput').val();
+                  var diaInput = $$('#diaInput').val();
+                  var imagem = $$('#img').val();
+                  
+           }, function(error){
+                  app.dialog.alert('Erro, confira no console');
+                  console.error(error)
+           })  
+          firebase.database().ref().child('cardapio').push(JSON.stringify(formData))
+
+  });      
+
+});      
